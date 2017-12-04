@@ -5,12 +5,19 @@ $(document).ready(function() {
     event.preventDefault();
     let inputDate = $('#date-input').val();
     let age = new Years();
-    // age.ageCalc(inputDate);
 
-    $('.current-age').append(`${age.ageCalc(inputDate)}`)
-    $('.mercury-age').append(`${age.mercuryCalc(inputDate)}`)
-    $('.venus-age').append(`${age.venusCalc(inputDate)}`)
-    $('.mars-age').append(`${age.marsCalc(inputDate)}`)
-    $('.jupiter-age').append(`${age.jupiterCalc(inputDate)}`)
-  })
+
+    $('.current-age').append(`${age.ageCalc(inputDate)}`);
+    $('.mercury-age').append(`${age.mercuryCalc(inputDate)}`);
+    $('.venus-age').append(`${age.venusCalc(inputDate)}`);
+    $('.mars-age').append(`${age.marsCalc(inputDate)}`);
+    $('.jupiter-age').append(`${age.jupiterCalc(inputDate)}`);
+
+
+    if ($("#cat:checked")) {
+      console.log('shits');
+    } else {
+      console.log('gigs');
+    }
+  });
 });

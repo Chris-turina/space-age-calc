@@ -9,7 +9,9 @@ export class Years {
     let currentDateSec = currentDate.getTime()/1000;
     let birthDateSec = birthDate.getTime()/1000;
     let ageSec = currentDateSec - birthDateSec;
+    console.log(ageSec);
     return ageSec;
+
   }
 
   ageCalc(date) {

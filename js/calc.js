@@ -9,7 +9,6 @@ export class Years {
     let currentDateSec = currentDate.getTime()/1000;
     let birthDateSec = birthDate.getTime()/1000;
     let ageSec = currentDateSec - birthDateSec;
-    console.log(ageSec);
     return ageSec;
 
   }
@@ -33,6 +32,18 @@ export class Years {
 
   jupiterCalc(date) {
     return ((this.ageInSeconds(date) / 11.86) / 31536000).toFixed(2);
+  }
+
+  averageLifeExpectancy(date){
+    let age = this.ageCalc(date)
+    // let age = Math.floor(this.ageInSeconds(date) / 31536000);
+    const avgLifeExpextancy = 78;
+    let yearsLeft = avgLifeExpextancy - age;
+    if (yearsLeft < 0) {
+      return(`You have lived longer then the average human!`)
+    } else {
+      return(`You have ${yearsLeft} years left to live!`)
+    }
   }
 
 }

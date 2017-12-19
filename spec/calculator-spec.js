@@ -35,7 +35,7 @@ describe('Years', function() {
 //
 
   it('should return how many years a person has left on mercury', function() {
-    expect(testAge.mercuryAvgExpectancy(testDate)).toEqual(`You have ${((78 * .24) - testAge.mercuryCalc(testDate)).toFixed(2)} years left to live!`);
+    expect(testAge.mercuryAvgExpectancy(testDate)).toEqual(`You have ${((78 * .24) - testAge.mercuryCalc(testDate))} years left to live!`);
   });
 
   it('should return a message stating that they have surpassed the average life expectancy on mercury', function() {
